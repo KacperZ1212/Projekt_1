@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trackowanie Renowacji Felg</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Renowacja Felg</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Strona Główna</a></li>
+                    <li><a href="#">Nasza oferta</a></li>
+                    <li><a href="#">Śledź postęp</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="uslugi">
+            <div class="container">
+                <h2>Nasze usługi</h2>
+                <h3>Oferujemy szeroki zakres usług związanych z renowacją felg. Sprawdź nasze propozycje poniżej!</h3>
+            </div>
+            <div class="service-list">
+                <div class="service-item">
+                    <img src="image1.jpg" alt="Usługa 1">
+                    <h4>Usługa 1</h4>
+                </div>
+                <div class="service-item">
+                    <img src="image2.jpg" alt="Usługa 2">
+                    <h4>Usługa 2</h4>
+                </div>
+                <div class="service-item">
+                    <img src="image3.jpg" alt="Usługa 3">
+                    <h4>Usługa 3</h4>
+                </div>
+                <div class="service-item">
+                    <img src="image4.jpg" alt="Usługa 4">
+                    <h4>Usługa 4</h4>
+                </div>
+                <div class="service-item">
+                    <img src="image5.jpg" alt="Usługa 5">
+                    <h4>Usługa 5</h4>
+                </div>
+                <div class="service-item">
+                    <img src="image6.jpg" alt="Usługa 6">
+                    <h4>Usługa 6</h4>
+                </div>
+            </div>
+        </section>
+        <section class="features">
+            <div class="container">
+                <h3>Co oferujemy?</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <h4>Monitorowanie Postępów</h4>
+                        <p>Śledź każdy etap renowacji felg, od czyszczenia, przez malowanie, aż po finalny montaż.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Powiadomienia dla Klientów</h4>
+                        <p>Automatyczne powiadomienia e-mail informujące klientów o postępach renowacji.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Historia Renowacji</h4>
+                        <p>Dostęp do historii wykonanych prac, zdjęć przed i po oraz szczegółowych raportów.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="opinie">
+            <div class="opinie-container">
+                <h2> Opinie naszych klientów: </h2>
+                <div class="opinia-item active">
+                    <p>"Bardzo profesjonalna obsługa, felgi wyglądają jak nowe!" - Jan Kowalski</p>
+                </div>
+                <div class="opinia-item">
+                    <p>"Jestem zachwycony efektami, polecam wszystkim!" - Anna Nowak</p>
+                </div>
+                <div class="opinia-item">
+                    <p>"Szybka i rzetelna renowacja, na pewno wrócę!" - Piotr Wiśniewski</p>
+                </div>
+                <div class="opinia-item">
+                    <p>"Super jakość i przystępne ceny. Dziękuję!" - Ewa Kaczmarek</p>
+                </div>
+            </div>
+        </section>        
+        
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Renowacja Felg. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        const opiniaItems = document.querySelectorAll('.opinia-item');
+        let currentIndex = 0;
+    
+        function showNextOpinia() {
+            // Ukrycie aktualnej opinii
+            opiniaItems[currentIndex].classList.remove('active');
+            
+            // Zwiększenie indexu aby przejść do następnej opinii
+            currentIndex = (currentIndex + 1) % opiniaItems.length; 
+            
+            // Wyświetlenie nowej aktywnej opinii
+            opiniaItems[currentIndex].classList.add('active');
+        }
+    
+        // zmiana opinii co 15 sekund
+        setInterval(showNextOpinia, 5000); 
+    </script>
+    
+</body>
+</html>
